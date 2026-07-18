@@ -21,7 +21,7 @@
   --shadow-lg: 0 30px 60px -30px rgba(0,0,0,0.9);
   --shadow-glow: 0 0 0 1px var(--accent-ring), 0 24px 50px -26px rgba(99,102,241,0.6);
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
-  --hero-glow: radial-gradient(60% 55% at 50% 0%, rgba(99,102,241,0.20), transparent 72%);
+  --hero-glow: radial-gradient(1100px 620px at 50% -160px, rgba(99,102,241,0.22), transparent 68%);
 }
 
 @media (prefers-color-scheme: light) {
@@ -43,7 +43,7 @@
     --shadow-md: 0 16px 34px -22px rgba(16,24,40,0.28);
     --shadow-lg: 0 26px 52px -28px rgba(16,24,40,0.3);
     --shadow-glow: 0 0 0 1px var(--accent-ring), 0 22px 46px -26px rgba(80,70,229,0.4);
-    --hero-glow: radial-gradient(60% 55% at 50% 0%, rgba(80,70,229,0.08), transparent 72%);
+    --hero-glow: radial-gradient(1100px 620px at 50% -160px, rgba(80,70,229,0.09), transparent 68%);
   }
 }
 
@@ -58,6 +58,15 @@ body {
   color: var(--text);
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
+}
+
+/* The hero glow is page-level ambiance, not a content-box background: paint it
+   full-bleed and top-anchored on the body so main's padding/max-width can't clip
+   it into a seam. */
+body.landing {
+  background-color: var(--bg);
+  background-image: var(--hero-glow);
+  background-repeat: no-repeat;
 }
 
 img, video { max-width: 100%; height: auto; }
@@ -220,7 +229,6 @@ main { max-width: 1080px; margin: 0 auto; padding: 32px 16px; }
 .hero {
   text-align: center;
   padding: 40px 0 48px;
-  background: var(--hero-glow);
 }
 .hero .eyebrow { margin-bottom: 18px; }
 .hero h1 {
