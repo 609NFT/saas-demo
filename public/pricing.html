@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pricing · SaaS Starter</title>
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="/">SaaS Starter</a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" tabindex="-1" />
+  <label class="nav-burger" for="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></label>
+  <nav id="nav-actions"></nav>
+</header>
+
+<main class="pricing-shell">
+  <span class="eyebrow">Pricing</span>
+  <h1>Simple, honest pricing</h1>
+  <p class="muted">Upgrade anytime. Cancel anytime. No hidden fees.</p>
+
+  <div class="pricing-grid">
+    <div class="plan">
+      <h2>Free</h2>
+      <div class="price">$0<span>/mo</span></div>
+      <ul>
+        <li>1 project</li>
+        <li>Community support</li>
+        <li>Core features</li>
+      </ul>
+      <button class="btn ghost" disabled>Current plan</button>
+    </div>
+
+    <div class="plan recommended">
+      <span class="badge">Most popular</span>
+      <h2>Pro</h2>
+      <div class="price">$19<span>/mo</span></div>
+      <ul>
+        <li>Unlimited projects</li>
+        <li>Priority email support</li>
+        <li>Advanced analytics</li>
+      </ul>
+      <button class="btn primary" data-checkout="pro">Upgrade to Pro</button>
+    </div>
+
+    <div class="plan">
+      <h2>Team</h2>
+      <div class="price">$49<span>/mo</span></div>
+      <ul>
+        <li>Everything in Pro</li>
+        <li>5 team seats</li>
+        <li>SSO + audit logs</li>
+      </ul>
+      <button class="btn primary" data-checkout="team">Upgrade to Team</button>
+    </div>
+  </div>
+
+  <div id="checkout-status" class="status" hidden></div>
+</main>
+
+<script src="/app.js"></script>
+<script>app.bindPricingPage();</script>
+</body>
+</html>

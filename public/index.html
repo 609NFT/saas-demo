@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SaaS Starter</title>
+    <meta name="description" content="A SaaS starter with accounts, billing, and a logged-in dashboard.">
+    <meta name="theme-color" content="#0b0d12">
+    <link rel="icon" href="data:image/svg+xml,<svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22><rect%20x=%2212%22%20y=%2212%22%20width=%2276%22%20height=%2276%22%20rx=%2218%22%20fill=%22%236366f1%22/></svg>">
+    <!-- Social share preview (Open Graph + Twitter). When you brand this app, update the
+         title/description here and swap og:image & twitter:image for your own 1200x630 image. -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SaaS Starter">
+    <meta property="og:description" content="A SaaS starter with accounts, billing, and a logged-in dashboard.">
+    <meta property="og:image" content="https://vibekit.bot/public/og-vibekit.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SaaS Starter">
+    <meta name="twitter:description" content="A SaaS starter with accounts, billing, and a logged-in dashboard.">
+    <meta name="twitter:image" content="https://vibekit.bot/public/og-vibekit.png">
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="landing">
+<header class="nav">
+  <a class="brand" href="/">SaaS Starter</a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" tabindex="-1" />
+  <label class="nav-burger" for="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></label>
+  <nav>
+    <a href="/pricing.html">Pricing</a>
+    <a href="/login.html">Log in</a>
+    <a class="btn primary" href="/signup.html">Sign up</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <span class="eyebrow">SaaS Starter</span>
+    <h1>Ship your SaaS <span class="grad">this week.</span></h1>
+    <p class="lede">A working auth, billing, and dashboard scaffold. Edit the parts you don't like. Keep the rest.</p>
+    <div class="cta-row">
+      <a class="btn primary lg" href="/signup.html">Start free</a>
+      <a class="btn ghost lg" href="/pricing.html">See pricing</a>
+    </div>
+    <div class="trust-row">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>No card required</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Bcrypt auth</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Stripe-ready</span>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>
+      </div>
+      <h3>Real auth</h3>
+      <p>Email + password signup with bcrypt hashing and signed sessions. No localStorage shortcuts.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 11h20M6 16h3"/></svg>
+      </div>
+      <h3>Stripe-ready</h3>
+      <p>Checkout + webhook are wired. Drop in <code>STRIPE_SECRET_KEY</code> and a Price ID, then set <code>STRIPE_WEBHOOK_SECRET</code> to fulfill upgrades.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>
+      </div>
+      <h3>Dashboard shell</h3>
+      <p>Auth-gated dashboard with user info, plan, and upgrade CTA. Customize the rest.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Built to be customized.</h2>
+    <p>Ask the agent to swap auth for OAuth, the JSON store for Postgres, or the design for whatever you'd ship.</p>
+    <a class="btn primary lg" href="/signup.html">Create an account</a>
+  </section>
+</main>
+
+<footer>
+  <span>SaaS Starter. Your scaffold to fork.</span>
+</footer>
+</body>
+</html>

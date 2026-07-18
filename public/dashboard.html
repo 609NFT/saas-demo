@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard · SaaS Starter</title>
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="app-shell">
+<header class="nav">
+  <a class="brand" href="/dashboard.html">SaaS Starter</a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" tabindex="-1" />
+  <label class="nav-burger" for="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></label>
+  <nav>
+    <a href="/pricing.html">Plans</a>
+    <button id="logout-btn" class="btn ghost">Log out</button>
+  </nav>
+</header>
+
+<main class="dash">
+  <section class="welcome">
+    <h1>Welcome back, <span id="user-name">…</span></h1>
+    <p class="muted">You're on the <strong id="user-plan">…</strong> plan.</p>
+  </section>
+
+  <p class="muted">Sample data. Wire these up to real metrics.</p>
+  <section class="stat-grid">
+    <div class="stat-card"><div class="stat-label">Projects (sample)</div><div class="stat-value">–</div></div>
+    <div class="stat-card"><div class="stat-label">API calls (sample)</div><div class="stat-value">–</div></div>
+    <div class="stat-card"><div class="stat-label">Active users (sample)</div><div class="stat-value">–</div></div>
+    <div class="stat-card"><div class="stat-label">Plan</div><div class="stat-value" id="stat-plan">free</div></div>
+  </section>
+
+  <section class="upgrade-cta" id="upgrade-cta">
+    <div>
+      <h2>Ready for more?</h2>
+      <p class="muted">Unlock unlimited projects and priority support on Pro.</p>
+    </div>
+    <a class="btn primary lg" href="/pricing.html">See plans</a>
+  </section>
+</main>
+
+<script src="/app.js"></script>
+<script>app.bindDashboard();</script>
+</body>
+</html>

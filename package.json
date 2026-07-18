@@ -1,0 +1,15 @@
+{
+  "name": "saas-starter",
+  "version": "1.0.0",
+  "description": "SaaS starter with real auth, sessions, Stripe-ready billing, and a dashboard shell.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.2",
+    "express-session": "^1.18.0",
+    "stripe": "^17.0.0"
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sign up · SaaS Starter</title>
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="auth-page">
+<header class="nav">
+  <a class="brand" href="/">SaaS Starter</a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" tabindex="-1" />
+  <label class="nav-burger" for="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></label>
+  <nav>
+    <a href="/login.html">Log in</a>
+  </nav>
+</header>
+
+<main class="auth-shell">
+  <div class="auth-brand">
+    <span class="auth-mark" aria-hidden="true"></span>
+  </div>
+  <div class="card">
+    <h1>Create your account</h1>
+    <p class="muted small">Free forever. No card required.</p>
+    <form id="signup-form" autocomplete="on">
+      <label>Name <input type="text" name="name" autocomplete="name" placeholder="Jane Doe" /></label>
+      <label>Email <input type="email" name="email" required autocomplete="email" placeholder="you@example.com" /></label>
+      <label>Password <input type="password" name="password" required minlength="8" autocomplete="new-password" placeholder="At least 8 characters" /></label>
+      <button class="btn primary lg" type="submit">Create account</button>
+      <div class="form-error" id="signup-error" hidden></div>
+    </form>
+    <p class="muted small auth-alt">Already have an account? <a href="/login.html">Log in</a></p>
+  </div>
+</main>
+
+<script src="/app.js"></script>
+<script>app.bindSignupForm();</script>
+</body>
+</html>
